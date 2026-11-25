@@ -5,7 +5,7 @@ from presidio_anonymizer.entities import OperatorConfig
 from presidio_analyzer.nlp_engine import NlpEngineProvider 
 
 
-from docuagent.core.logger import logger
+from paperpilot.core.logger import logger
 
 ENTITIES = ["EMAIL_ADDRESS", "PHONE_NUMBER", "IN_PHONE", "IN_AADHAAR",
             "IN_PAN", "CREDIT_CARD", "IBAN_CODE", "IP_ADDRESS"]

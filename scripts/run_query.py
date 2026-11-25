@@ -1,10 +1,10 @@
 # scripts/run_query.py
 from pathlib import Path
 
-from docuagent.retrieval.hybrid_search import build_advanced_retriever
+from paperpilot.retrieval.hybrid_search import build_advanced_retriever
 from dotenv import load_dotenv
-from docuagent.retrieval.vector_store import ChromaRetriever
-from docuagent.agent.rag_agent import RAGAgent
+from paperpilot.retrieval.vector_store import ChromaRetriever
+from paperpilot.agent.rag_agent import RAGAgent
 
 def main():
     # Load your GOOGLE_API_KEY from .env
@@ -38,8 +38,7 @@ def main():
         if query.lower() in ['exit', 'quit']:
             break
             
-        answer = agent.ask(query)
-        print(f"\nAI Answer:\n{answer}")
+        agent.ask(query)
 
 if __name__ == "__main__":
     main()

@@ -4,7 +4,7 @@ import hashlib
 
 from langchain_core.documents import Document
 
-from docuagent.core.logger import logger
+from paperpilot.core.logger import logger
 
 from .base import ChunkingConfig
 

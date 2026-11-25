@@ -2,7 +2,7 @@
 
 from anyio import Path
 from dotenv import load_dotenv
-from docuagent.ingestion.pipeline import IngestionPipeline
+from paperpilot.ingestion.pipeline import IngestionPipeline
 
 if __name__ == "__main__":
     load_dotenv() 

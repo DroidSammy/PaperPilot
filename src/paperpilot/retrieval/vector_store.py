@@ -1,7 +1,7 @@
 # src/docugent/retrieval/vector_store.py
 from langchain_chroma import Chroma
-from docuagent.retrieval.embedders import EmbedderClient
-from docuagent.core.logger import get_logger
+from paperpilot.retrieval.embedders import EmbedderClient
+from paperpilot.core.logger import get_logger
 from langchain_core.documents import Document
 
 logger = get_logger(__name__)

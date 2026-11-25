@@ -5,7 +5,7 @@ from pathlib import Path
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_core.documents import Document
 
-from docuagent.core.logger import logger
+from paperpilot.core.logger import logger
 
 
 class PDFLoader:

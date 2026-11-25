@@ -1,11 +1,11 @@
 from langchain_chroma import Chroma
 
-from docuagent.core.logger import logger
-from docuagent.ingestion.chunking import ChunkingConfig, ChunkPostProcessor, build_chunker
-from docuagent.ingestion.guardrails.pii import PIIRedactor
-from docuagent.ingestion.guardrails.promptInjection import InjectionScanner
-from docuagent.ingestion.loaders import PDFLoader
-from docuagent.retrieval.embedders import EmbedderClient
+from paperpilot.core.logger import logger
+from paperpilot.ingestion.chunking import ChunkingConfig, ChunkPostProcessor, build_chunker
+from paperpilot.ingestion.guardrails.pii import PIIRedactor
+from paperpilot.ingestion.guardrails.promptInjection import InjectionScanner
+from paperpilot.ingestion.loaders import PDFLoader
+from paperpilot.retrieval.embedders import EmbedderClient
 
 
 class IngestionPipeline:

@@ -1,7 +1,7 @@
 from langchain_core.documents import Document
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from docuagent.core.logger import logger
+from paperpilot.core.logger import logger
 
 def chunk_documents(
     documents: list[Document], 

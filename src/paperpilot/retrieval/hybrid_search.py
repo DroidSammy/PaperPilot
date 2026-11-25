@@ -1,9 +1,9 @@
-# src/docuagent/retrieval/hybrid_search.py
+# src/paperpilot/retrieval/hybrid_search.py
 from langchain_classic.retrievers import EnsembleRetriever, ContextualCompressionRetriever
 from langchain_community.retrievers import BM25Retriever
 from langchain_classic.retrievers.document_compressors import CrossEncoderReranker
 from langchain_community.cross_encoders import HuggingFaceCrossEncoder
-from docuagent.core.logger import get_logger
+from paperpilot.core.logger import get_logger
 
 logger = get_logger(__name__)
 

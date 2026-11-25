@@ -3,7 +3,7 @@ from typing import Literal
 
 from langchain_core.documents import Document
 
-from docuagent.core.logger import logger
+from paperpilot.core.logger import logger
 
 # Heuristic patterns. Extend them as you find real cases in your own documents.
 PATTERNS = [

@@ -16,3 +16,6 @@ wheels/
 .venv/
 __pycache__/
 *.py[cod]
+
+# Local vector database
+data/chroma_db/

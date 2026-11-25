@@ -1,28 +1,25 @@
 import os
-
-from google import genai
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_classic.chains.combine_documents import create_stuff_documents_chain
 from langchain_classic.chains import create_retrieval_chain
 from langchain_classic.retrievers import EnsembleRetriever
 from langchain_community.retrievers import BM25Retriever
-from docuagent.core.logger import get_logger
+from paperpilot.core.logger import get_logger
 
 logger = get_logger(__name__)
 
 class RAGAgent:
     def __init__(self, retriever):
         
-        raw_client = genai.Client(
-            api_key=os.environ.get('GOOGLE_API_KEY'),
-            http_options={'api_version': 'v1alpha'}
-        )
-        
-        # 2. Pass the raw client directly into LangChain
-        self.llm = ChatGoogleGenerativeAI(
-            model="gemini-3.8-flash", 
-            client=raw_client,
+        groq_api_key = os.getenv("GROQ_API_KEY")
+
+        if not groq_api_key:
+             raise ValueError("GROQ_API_KEY not found in environment variables.")
+
+        self.llm = ChatGroq(
+            model="openai/gpt-oss-120b",
+            api_key=groq_api_key,
             temperature=0.1
         )
 
